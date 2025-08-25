@@ -1,0 +1,21 @@
+Getting Help
+Linux has three help options because they're for different situations. $man is the full, detailed user manual. $--help gives you a quick cheat sheet for a command. And $help is specifically for commands that are part of the shell itself, like $cd$.
+
+You'd absolutely need $help for those built-in commands, since they don't have their own man pages.
+
+Searching Files
+The main difference is that $ls | grep ".txt" only looks at filenames in your current folder. In contrast, $find . -name "*.txt" actually dives deep, searching through all the subfolders recursively.
+
+Because of that, $find$ is way more powerful. Use it when you need to search an entire project or find files based on things like their size or when they were last edited.
+
+Piping to grep
+Yep, you can do the exact same thing with your command history. If you want to find a command you ran that used the word docker, you'd just type:
+
+$history | grep "docker"
+
+It's a great way to find a command you can't quite remember.
+
+Archiving
+You'd send a .tar.gz file to another Linux developer because it saves important things like file permissions. A .zip file can mess those up, which might break the project on their end. It's the native format, so it just works.
+
+As for security, the biggest risk with an unknown archive is a "path traversal" attack. That's a fancy name for a booby-trapped file that tries to overwrite an important system file. It's always a good idea to peek inside first with $tar -tvf archive.tar.gz before you extract it.
