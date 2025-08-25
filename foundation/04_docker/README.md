@@ -1,5 +1,10 @@
 ## Simple CRUD (Docker + Compose)
 
+### Docker Images
+
+![Docker Overview](./pics/docker.png)
+![Terminal Example](./pics/image.png)
+
 ### Run
 
 - Copy `env.example` to `.env` and set `DATABASE_URL` if using Neon. Otherwise default local Postgres is used.
